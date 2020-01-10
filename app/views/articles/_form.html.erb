@@ -1,25 +1,22 @@
-<% if @article.errors.any?  %>
-  <h2>The following errors prevented the article from getting created</h2>
-  <ul>
-    <% @article.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-  </ul>
-<%end %>
+<div class="container-fluid">
+  <%= render 'shared/errors', obj: @article %>
+  <div class="row">
+    <div class="col-xs-12">
+      <%= form_for @article do |a| %>
+        <div class="form-group">
+          <label>Title</label>
+          <%= a.text_field :title, class: 'form-control', placeholder: 'Enter article title', autofocus: true %>
+        </div>
 
-<%= form_for @article do |a| %>
-  <p>
-    <%= a.label :title %> <br>
-    <%= a.text_field :title %>
-  </p>
+        <div class="form-group">
+          <label>Description</label>
+          <%= a.text_area :description, class: 'form-control', placeholder: 'Enter article description' %>
+        </div>
 
-  <p>
-    <%= a.label :description %><br>
-    <%= a.text_area :description %>
-  </p>
+        <%= a.submit class: 'btn btn-primary' %>
+        <%= link_to "Back to the articles", articles_path, class: 'btn btn-info' %>
 
-  <%= a.submit %>
-
-<% end %>
-
-<p><%= link_to "Back to the articles", articles_path %></p>
+      <% end %>
+    </div>
+  </div>
+</div>
