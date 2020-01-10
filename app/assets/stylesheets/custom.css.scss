@@ -1,13 +1,12 @@
 @import "bootstrap/dist/css/bootstrap";
 
 footer {
-  position: fixed;
   height: 50px;
-  bottom: 0;
   width: 100%;
   background-color: #343a40;
   padding: 10px;
   color: white;
+  margin-top: 50px;
 }
 
 .footer-copyright {
@@ -56,4 +55,22 @@ footer {
   h2 {
     margin-bottom: 20px;
   }
+}
+
+// Article
+.article_actions {
+
+  .btn {
+    width: 130px;
+  }
+}
+
+.new_article_bottom {
+  width: 100%;
+}
+
+// General
+
+.form-div form {
+  width: 100%;
 }
