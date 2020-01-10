@@ -1,4 +1,4 @@
-@import 'bootstrap/dist/css/bootstrap';
+@import "bootstrap/dist/css/bootstrap";
 
 footer {
   position: fixed;
@@ -41,10 +41,19 @@ footer {
   color: #666666;
 }
 
-
 // Alerts
 
 .alert-div {
   margin-top: 20px;
   padding-bottom: 0;
+}
+
+// Cards
+
+.container-card {
+  margin-top: 20px;
+
+  h2 {
+    margin-bottom: 20px;
+  }
 }
