@@ -1,0 +1,12 @@
+<div class="container-fluid container-card col-6 offset-3 text-center">
+  <br> <h1>Welcome to <%= @user.username %>'s page</h1> <br>
+  <div class="user_profile">
+    <%= gravatar_for @user %>
+  </div>
+  <br>
+  <h4><%= @user.username %>'s articles</h4> <br>
+</div>
+
+<div class="container-fluid container-card text-center">
+  <%= render 'articles/article', articles: @user.articles %>
+</div>
