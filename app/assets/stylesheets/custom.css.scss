@@ -70,6 +70,15 @@ footer {
   width: 100%;
 }
 
+.article_link {
+  color: dimgray;
+}
+
+.article_link:hover {
+  text-decoration: none;
+  color: #343a40;
+}
+
 // General
 
 .form-div form {
