@@ -4,7 +4,8 @@
     <%= gravatar_for @user %>
   </div>
   <br>
-  <h4><%= @user.username %>'s articles</h4> <br>
+  <h4><%= @user.username %>'s articles</h4>
+  <%= link_to 'Update my profile', edit_user_path(@user), class: 'btn btn-info' %>
 </div>
 
 <div class="container-fluid container-card text-center">

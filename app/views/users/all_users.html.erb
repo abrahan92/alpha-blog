@@ -1,6 +1,6 @@
 <div class="container-fluid text-center col-6 offset-3">
   <br> <h1>All Alpha bloggers</h1> <br>
-  <%= @users.each do |user| %>
+  <% @users.each do |user| %>
     <br>
     <div class="card">
       <%= gravatar_for(user, size: 180) %>
