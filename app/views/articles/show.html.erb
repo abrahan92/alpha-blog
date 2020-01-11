@@ -1,6 +1,11 @@
 <div class="container-fluid container-card col-6 offset-3">
   <h2 align="center">Title: <%= @article.title %></h2>
   <div class="card card-body bg-light col-xs-8 col-xs-offset-2">
+    <div class="text-center">
+      <h1><%= @article.user.username %></h1>
+      <%= gravatar_for(@article.user, size: 180) %>
+    </div>
+    <hr>
     <h4 class="center">
       <strong>Description</strong>
     </h4>
