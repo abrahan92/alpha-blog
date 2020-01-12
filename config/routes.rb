@@ -7,7 +7,6 @@ Rails.application.routes.draw do
   resources :articles
 
   get 'signup', to: 'users#new'
-  get 'all_users', to: 'users#all_users'
-  resources :users, except: [:new, :index]
+  resources :users, except: [:new]
 
 end

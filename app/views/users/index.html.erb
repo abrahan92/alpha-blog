@@ -1,9 +1,12 @@
 <div class="container-fluid text-center col-6 offset-3">
   <br> <h1>All Alpha bloggers</h1> <br>
+  <div class="col-6 offset-3 pagination">
+    <%= will_paginate(@users, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer) %>
+  </div>
   <% @users.each do |user| %>
     <br>
     <div class="card">
-      <%= gravatar_for(user, size: 180) %>
+      <%#= gravatar_for(user, size: 180) %>
       <div class="card-body">
         <h5 class="card-title"><%= user.username %></h5>
         <small class="card-title"><%= pluralize(user.articles.count, "article") %></small> <br> <br>
@@ -11,4 +14,8 @@
       </div>
     </div>
   <% end %>
+  <br>
+  <div class="col-6 offset-3 pagination">
+    <%= will_paginate(@users, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer) %>
+  </div>
 </div>

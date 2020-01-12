@@ -9,5 +9,12 @@
 </div>
 
 <div class="container-fluid container-card text-center">
-  <%= render 'articles/article', articles: @user.articles %>
+  <div class="col-6 offset-3 pagination">
+    <%= will_paginate(@articles, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer) %>
+  </div>
+  <%= render 'articles/article', articles: @articles %>
+  <br>
+  <div class="col-6 offset-3 pagination">
+    <%= will_paginate(@articles, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer) %>
+  </div>
 </div>
