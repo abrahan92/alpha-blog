@@ -108,3 +108,29 @@ footer {
 .pagination nav {
   margin: 0 auto;
 }
+
+// Login
+.login-form {
+  margin-top: 10em;
+
+  form {
+    padding: 40px
+  }
+}
+
+.login-btn {
+  position: absolute;
+  right: 0;
+  margin-right: 20px;
+}
+
+.logout-btn {
+  position: absolute;
+  right: 0;
+  margin-right: 20px;
+}
+
+// Navigation
+.profile_dropdown_user {
+  margin-right: 90px;
+}
