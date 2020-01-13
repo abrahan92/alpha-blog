@@ -3,10 +3,12 @@
     <div class="col-xs-8 col-xs-offset-2">
       <div class="alert alert-danger" role="alert">
         <h4 class="alert-heading">The following errors prevented the article from getting created</h4>
-        <%= pluralize(obj.errors.count, "error") %>
-        <% obj.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
+        <div class="panel-body">
+          <%= pluralize(obj.errors.count, "error") %>
+          <% obj.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>

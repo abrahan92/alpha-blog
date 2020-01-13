@@ -1,0 +1,17 @@
+<div class="container-fluid">
+  <%= render 'shared/errors', obj: @category %>
+  <div class="row">
+    <div class="col-12">
+      <%= form_for @category do |c| %>
+        <div class="form-group">
+          <label>Name</label>
+          <%= c.text_field :name, class: 'form-control', placeholder: 'Enter category name', autofocus: true %>
+        </div>
+
+        <%= c.submit class: 'btn btn-primary' %>
+        <%= link_to "Back to the categories", categories_path, class: 'btn btn-info' %>
+
+      <% end %>
+    </div>
+  </div>
+</div>

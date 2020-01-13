@@ -1,0 +1,15 @@
+<% categories.each do |c| %>
+  <div class="container-card">
+    <div class="card card-body bg-light col-6 offset-3">
+      <h3><%= link_to c.name, category_path(c), class: 'category_link' %></h3>
+      <hr>
+      <% if logged_in? && current_user.admin? %>
+        <div class="categories_actions">
+          <%= link_to 'Edit', edit_category_path(c), class: 'btn btn-info' %>
+          <%= link_to 'Show', category_path(c), class: 'btn btn-success category-show' %>
+          <%= link_to 'Delete', category_path(c), method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-danger' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+<% end %>

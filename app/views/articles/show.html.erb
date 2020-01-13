@@ -12,7 +12,7 @@
     <hr>
     <%= simple_format(@article.description) %>
 
-    <% if logged_in? && current_user == @article.user %>
+    <% if logged_in? && (@user == a.user || @user.admin?) %>
       <div class="article_actions">
         <%= link_to 'Edit', edit_article_path(@article), class: 'btn btn-info' %>
         <%= link_to 'Delete', article_path(@article), method: :delete,
